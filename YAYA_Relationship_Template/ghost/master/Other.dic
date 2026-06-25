@@ -1,0 +1,57 @@
+OnChoiceSelect
+{
+    EVAL("Select.%(reference0)")
+}
+
+OnTranslate
+{
+	_talk = reference0
+	_talk = REPLACE(_talk, "Anchor 1", "\_a[anchor1]Anchor 1\_a")
+ 	_talk = REPLACE(_talk, "Anchor 2", "\_a[anchor2]Anchor 2\_a")
+ 	_talk = REPLACE(_talk, "Anchor 3", "\_a[anchor3]Anchor 3\_a")
+	
+	//This is the bit that runs embedded elements in script input
+	if reference1 == "" && reference2 == "" //If this is from script input
+	{
+		
+		EVAL('"' + REPLACE(_talk,'"','""') + '"')
+	}
+	else
+	{
+		TOSTR(_talk)
+	}
+}
+
+OnKeyPress
+{
+	if reference0 == "t"
+	{
+	OnAiTalk
+	}
+	elseif reference0 == "r"
+	{
+	OnLastTalk
+	}
+	elseif reference0 == "f1"
+	{
+	"\![open,readme]"
+	}
+}
+ 
+ OnAiTalk
+ {
+	if RAND(100) < communicateratio
+ 	{
+ 		StartCommunicate
+	}
+ 	else
+	{
+			if CHAIN.IDName == "" {
+ 				lastTalk = RandomTalk
+			}
+			else {
+				lastTalk = ChainTalk
+			}
+			lastTalk
+	}
+ }

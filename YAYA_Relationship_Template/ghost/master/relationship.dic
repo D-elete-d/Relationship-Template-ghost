@@ -1,0 +1,153 @@
+/*
+Here are the variables we will be using! (Unless you changed them.)
+they are just here for easy access so dont uncomment them if you added your own or changed their names you can do it here too!
+
+Love
+
+Hate
+	
+Feelings
+
+ 
+ something like this could go into your aitalk, since it covers all the basic stuff,heres how that would look (probably)
+ 
+ NOTE: You can add as much dialogue to any of the pools as you'd like, you can even add more "elseif"s or get rid of the ones you dont want! 
+ a relationship system doesnt have to be super complicated and can just be as small as two pools of dialogue! So please dont feel pressured to fill up every single
+ pool, its better to have more dialogue always available to the player than have 10 per level ^^ 
+*/ 
+RandomTalk : nonoverlap_pool
+{
+	if Feelings <= 10
+	{
+		"\0\s[0]The dialogue in this pool will only play when ""feelings"" falls down to 10 or below.\e"
+	}
+		elseif Feelings <= 20
+		{
+			"\0\s[0]When the feelings is 20 and below!\e"
+		}
+		elseif Feelings <= 30
+		{
+			"\0\s[0]When it has dropped down to 30\e"
+		}
+		
+			elseif Feelings >= 50 //our starting number!
+			{
+				"\0\s[2]test.\e"
+				"\0\s[0]This is ""normal"" dialogue/the dialogue you will get if your friendship hasnt changed at all with the ghost\e"
+			}
+			
+	elseif Feelings >= 60 //Remember that what the numbers mean, going up or down- Relys soley on what dialogue you put into each pool! (as well as any variables you are using) You could make them if you get to a certian friendship level maybe the character realises they are getting too close or attached and grow uncomfortable or if the player confesses their love too soon, ect ect just spin ballin ideas here.
+	{
+		"\0\s[0]dialogue for when the friendship is at 60 or higher~!"
+	}
+	elseif Feelings >= 80
+	{
+		"\0\s[0]where almost at the end! (80 friendship points)"
+	}
+	elseif Feelings >= 100
+	{
+		"\0\s[0]The highest it can go!/e"
+	}
+	
+	"\0\s[2]Normal dialogue unrestricted by the feelings variable\e"
+}
+
+
+/*
+EXPLANING: 
+
+if statment, meaning exactly what it sounds like:
+
+if this is true
+{
+	then this happens (does that make sense?)
+}
+
+Feelings is the variable we are (currently) using, it holds the value of whatever the points/number you are at with the ghost is.
+but what is >= <= mean?
+
+example:("value" is taking the place of feelings/the variable for this explanation) 
+
+ value >= 10 if "value" Is equal to or more than 10
+ 
+ value > 10 if "value" is more than 10
+ 
+ 
+ value <= 10 if "value" is equal or less than 10 
+ 
+ value < 10 if "value" is less than 10 
+ 
+ value == 10 if "value"is equal to 10 
+ 
+ 
+ NEXT
+ 
+ To add to a variable:
+ ---------
+ setting a variable to a specific number/word:
+ 
+ value = 0
+ value = "hello!"
+ 
+ ---------
+value += 5
+
+------------
+NEXT
+
+taking away from a variable:
+
+value -= 10
+
+value = "bye" 
+
+since its a word, and you cant subtract from words You can instead set a function up that checks if your variable held a specific word I showed before with hello and bye,
+You could make it be something like:
+
+Value = "on"
+
+or 
+
+value = off
+
+(a function like that would look something like this...)
+
+elseif value == "off"
+{
+	value = "on"
+	{
+	"\0\s[0]Value is now set to on: %(value)"
+	}
+}
+elseif value == "on"
+{
+	value = "off"
+	{
+	"\0\s[0]Value is now set to off: %(value)"
+	}
+}
+
+But for it to work (well) You will have to initilize the variable by opening the dev pallete and opening script input and typing 
+'value = on' (i think?)
+*/ 
+
+
+
+//You can easily copy and paste this anywhere you want in  your dic files, such as: booting them up or closing them, or petting/hitting diolauges 
+//You dont have to have relationship dialogue for every single interaction with your ghost, you can cover alot of relationship stages with just the <=, >= symbols! only do what you actually want and make sure you are having fun :]
+
+/*SHORTENED VERSION:
+
+elseif Feelings <= 30
+{
+	
+}
+elseif Feelings >= 50
+{
+	
+}
+elseif Feelings >= 100
+{
+	
+}
+*/ 

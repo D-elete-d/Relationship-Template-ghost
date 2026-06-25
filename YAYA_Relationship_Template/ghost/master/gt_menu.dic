@@ -1,0 +1,37 @@
+﻿
+OpenSakuraMenu
+{
+	MenuRun
+}
+
+
+MenuRun : all
+ {	
+	"\_q" 
+	if lastTalk != "" {
+	"\![*]\q[repeater,OnLastTalk]\n\n[half]"}
+	--
+ 	"\![*]\q[Stale ahh dialogue (rn),OnAiTalk]\n"
+	--
+	"\![*]\q[variable initulizer,InitVaribles]\n"
+ 	"\n\![*]\q[close menu,CANCEL]\n\n\n[half]\e"
+}
+
+OnLastTalk 
+{
+"%(lastTalk)\e"
+}
+
+Select.BACKTOMENU
+{MenuRun}
+
+Select.CANCEL
+{}
+
+OnChoiceTimeout
+ {"\0\s[0]The menu has timed out.\e"}
+
+Select.InitVaribles //To check the variable after, open your dev pallete  right click your ghost to open their built-in menu, go to utilities (you will have to have developer functions enabled, just go to the same right click menu, hover over options and cllick on preferences. in general it says "enable developer functions [caution]" I think. anyways go to utilities and click on development interface, then cript input or Ctrl + S and put in (example) %(feelings) it should make the ghost say the value stored in the variable.
+{
+	Feelings = 50 //with this you can reset the variable so you can easily test dialogue, you can change what the variables equal to whatever you'd like!
+}

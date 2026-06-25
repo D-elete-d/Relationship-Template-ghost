@@ -1,0 +1,80 @@
+﻿
+OnMouseMove
+ {
+		if reference3 == 0
+		{
+			MouseMoveSakura
+		}
+		else{}
+ }
+ 
+
+MouseMoveSakura
+ {
+	if reference4 != ""
+ 	{
+ 		stroke++ 
+ 		if stroke >= 45
+		{
+ 			stroke = 0
+			if reference4 == "leemoon"
+ 			{
+				Feelings += 5
+				{
+				"\0\s[2]each pet adds to 5 points to the feelings variable!\e"
+				"\0\s[2]<33\e"
+				}
+			}
+			//Uncomment below if you want, basically if the "feelings" drop down to 10 or below then it wont allow the user to gain anymore friendship points from petting.
+			// elseif Feelings <=10
+			// {
+				// "\0\s[1]I dont like you.\e"
+				//"\0\s[1]Nope.\e"
+			// }
+			}
+ 		}
+else
+{stroke = 0}
+}
+
+
+OnMouseDoubleClick
+ {
+	//---- like with the OnMouseMove function above, this determines who the user is clicking on.
+	if reference5 == 0 //checks which button is being used for the click
+	{
+	 	if reference3 == 0 //if the character is 0, aka your main character
+		{
+		MouseDoubleClickSakura
+		}
+		else{}
+	}
+ }
+
+MouseDoubleClickSakura
+ {
+ 	if reference4 == "leemoon"
+	{
+		Feelings -= 5
+		{
+			if feelings <= 10
+			{
+			"\0\s[1]And I thought *I* was supposed to be the sour one.\e"
+			}
+			if Feelings <= 40
+			{
+			"\0\s[1]*you puncture the lemon and it starts leeking lemon juiceee :C\e"
+			}
+			if Feelings <= 50
+			{
+				"\0\s[2]How totally unexpected.\e"
+			}
+			if feelings >= 100
+			{
+				"\0\s[2]How could you? after everything we have been through...\e"
+			}
+		}
+	}
+	else
+ 	{OpenSakuraMenu}
+ }

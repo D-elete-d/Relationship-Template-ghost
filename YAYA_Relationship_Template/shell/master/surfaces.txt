@@ -1,0 +1,39 @@
+descript
+{
+    version,1
+}
+
+//collision0
+//element0,overlay,surface.png,0,0
+
+surface0 //O O
+{
+collision0,86,177,209,222,leemoon
+
+element0,overlay,surface0.png,0,0
+animation0.interval,never
+animation0.pattern0,overlay,3,700,0,0
+}
+
+surface1 //DEADPAN
+{
+collision0,86,177,209,222,leemoon
+
+element0,overlay,surface1.png,0,0
+animation0.interval,never
+animation0.pattern0,overlay,3,700,0,0
+}
+
+surface2 //^ ^
+{
+collision0,86,177,209,222,leemoon
+
+element0,overlay,surface2.png,0,0
+animation0.interval,never
+animation0.pattern0,overlay,3,700,0,0
+}
+
+surface3 //blushie
+{
+element0,overlay,surface3.png,0,0
+}

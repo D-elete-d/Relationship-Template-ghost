@@ -1,0 +1,16 @@
+charset,UTF-8
+
+name,Jentlemen
+type,ghost
+
+shiori,yaya.dll
+
+craftman,Cherrie
+craftmanw,
+craftmanurl,
+
+sakura.name,Lemon
+//kero.name,
+
+sstp.allowunspecifiedsend,0
+shiori,yaya.dll
