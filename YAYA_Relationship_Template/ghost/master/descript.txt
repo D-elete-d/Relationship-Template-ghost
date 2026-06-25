@@ -1,6 +1,6 @@
 charset,UTF-8
 
-name,Jentlemen
+name,Relationship Template
 type,ghost
 
 shiori,yaya.dll
