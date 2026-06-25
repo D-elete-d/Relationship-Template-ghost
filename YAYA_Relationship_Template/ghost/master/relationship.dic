@@ -19,37 +19,37 @@ RandomTalk : nonoverlap_pool
 {
 	if Feelings <= 10
 	{
-		"\0\s[0]The dialogue in this pool will only play when ""feelings"" falls down to 10 or below.\e"
+		"\0\s[1]The dialogue in this pool will only play when ""feelings"" falls down to 10 or below.\e"
 	}
 		elseif Feelings <= 20
 		{
-			"\0\s[0]When the feelings is 20 and below!\e"
+			"\0\s[1]When the feelings is 20 and below!\e"
 		}
 		elseif Feelings <= 30
 		{
-			"\0\s[0]When it has dropped down to 30\e"
+			"\0\s[1]When it has dropped down to 30\e"
 		}
 		
 			elseif Feelings >= 50 //our starting number!
 			{
-				"\0\s[2]test.\e"
+				"\0\s[0]Quick thing, I dont recommend actually using this ghost as a full template for you own, I guess there isnt a reason you shouldnt besides it lacking in alot of features.\e"
 				"\0\s[0]This is ""normal"" dialogue/the dialogue you will get if your friendship hasnt changed at all with the ghost\e"
 			}
 			
 	elseif Feelings >= 60 //Remember that what the numbers mean, going up or down- Relys soley on what dialogue you put into each pool! (as well as any variables you are using) You could make them if you get to a certian friendship level maybe the character realises they are getting too close or attached and grow uncomfortable or if the player confesses their love too soon, ect ect just spin ballin ideas here.
 	{
-		"\0\s[0]dialogue for when the friendship is at 60 or higher~!"
+		"\0\s[2]/i[0]dialogue for when the friendship is at 60 or higher~!"
 	}
 	elseif Feelings >= 80
 	{
-		"\0\s[0]where almost at the end! (80 friendship points)"
+		"\0\s[2]where almost at the end! (80 friendship points)"
 	}
 	elseif Feelings >= 100
 	{
 		"\0\s[0]The highest it can go!/e"
 	}
 	
-	"\0\s[2]Normal dialogue unrestricted by the feelings variable\e"
+	"\0\s[0]Normal dialogue unrestricted by the feelings variable\e"
 }
 
 

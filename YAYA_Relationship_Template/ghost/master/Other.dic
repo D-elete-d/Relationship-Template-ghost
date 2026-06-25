@@ -55,3 +55,23 @@ OnKeyPress
 			lastTalk
 	}
  }
+ 
+ //Ill get rid of this once I go through all the files and get it to a place where I'm happy with (and not (minorly) sleep deprived lol)
+ On_homeurl
+{
+	"https://raw.githubusercontent.com/D-elete-d/Relationship-Template-ghost/YAYA_Relationship_Template/"
+}
+
+OnInstallBegin
+ {
+	 if reference0 == "ghost"
+	 {
+		"\0\s[0]Updates found\e"
+	}
+	 else
+	 {
+		"\0\s[1]Nothing.\e"
+		}
+ }
+ 
+ 
