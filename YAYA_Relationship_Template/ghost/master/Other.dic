@@ -59,7 +59,7 @@ OnKeyPress
  //Ill get rid of this once I go through all the files and get it to a place where I'm happy with (and not (minorly) sleep deprived lol)
  On_homeurl
 {
-	"https://raw.githubusercontent.com/D-elete-d/Relationship-Template-ghost/YAYA_Relationship_Template/"
+	"https://raw.githubusercontent.com/D-elete-d/Relationship-Template-ghost/main/Updates/YAYA_Relationship_Template/"
 }
 
 OnInstallBegin
@@ -74,4 +74,44 @@ OnInstallBegin
 		}
  }
  
+ OnUpdateBegin
+ {
+	"\0\s[0]in de bininging\e"
+}
+
+ //---- OnUpdateReady ---------------------------------------------------------
+ //If the ghost finds new files to update with.
  
+OnUpdateReady
+ {
+	reference0++
+	
+    "\0\s[0] updates available: %(reference0)\e"
+ }
+
+OnUpdateComplete
+ {
+	if reference0 == "none" 
+ 	{"\0\s[0]Nothing </3\e"}
+ 	else
+	{"\0\s[0]Update gone right :3\e"}
+}
+
+OnUpdateFailure
+ {
+	 _file = SPLITPATH(reference1)[2] + SPLITPATH(reference1)[3] //This gets the name and extension of the offending file
+	 
+	 
+	if reference0 == "timeout" //if the connection times out
+ 	{
+ 		"\0\s[0]The update connection has timed out.\e"
+	}
+ 	elseif reference0 == "md5 miss" //This is the final message displayed when you've run into an md5 error below at some point.
+	{
+		"\0\s[0]The MD5 hash of %(_file) doesn't match.\e"
+ 	}
+	else //for other errors
+ 	{
+ 		"\0\s[0]The update could not be completed.\w8\0\s[0]The error is '%(reference0)'.\e"
+	}
+ }
