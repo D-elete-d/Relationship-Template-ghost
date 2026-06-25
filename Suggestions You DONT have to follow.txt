@@ -1,0 +1,103 @@
+﻿(STILL BEING WRITTEN!)
+
+
+
+for AiTalk, I don't suggest increasing or decreasing friendship points since its random and can punish or reward 
+the player or something they didn't earn, it can also unintentionally cause the player to miss out on a lot of 
+dialogue that gets locked behind higher or lower required points.
+
+you could however add choices for the player to make in diolauge inside of ai talk. try to make the choices
+have meaning instead of just being there to try and push the variable to move up or down, something like:
+
+ (( NOTE TO AVOID CONFUSION: this is not how you set up choices or dialogue! ))
+
+----------------
+"Do you like flowers?"
+
+"yes" friendship + 5 (the character is satisfied/happy)
+
+ "no" friendship - 5 (the character gets disappointed)
+
+----------------
+instead make it a *little* more specific! and keep in mind that stuff in AiTalk will most likely be played
+multiple times, so dialogue like this can get bland for some people, and answering multiple times to the same
+question can get annoying even if the trade off is more friendship points. 
+
+
+TLDR:
+Its a meaningless question that gets asked too many times.
+
+"so if I cant do that then what do you want me to do?"
+
+well, of course you are allowed to do your own thing and I'm admittedly NOT good with writing dialogue but there
+are some cool things you can do with ghosts to spice up your dialogue!
+
+
+first: The easiest, adding a envelope, its basically a secluded pool of dialogue you can call in well, your dialogue.
+
+envelope example: 
+----------------
+//Don't put any "\e" at the end of dialogue in envelopes as it will end the dialogue entirely cutting off everything after 
+the envelope being called
+
+The name of your envelope goes at the top, same as a function!
+
+also just like before, try and make your options mean something, don't just add every flower you can think of into an 
+envelope, instead thing of what flowers your character would or does like and since they are asking the player,
+they could bring up flowers they think you would like based on their opinion of you perhaps? (tied to the friendship points)
+------------
+flowers
+{
+	"roses"
+	"lilies"
+	"poppy's"
+}
+----------------
+
+
+"Do you like %(flowers)?"
+
+"yes" = no outcome besides some text
+
+"no" = the character gets disappointed
+-----------
+
+You could also get rid of the ability to choose yes or no,
+
+------------
+"Do you like %(flowers)?"
+----------- 
+
+again this dialogue will show up often and while its better, we can give the option a purpose! like if The player says yes to liking flowers, the character will talk about them, Their favorites and possibly tips for taking care of them,
+ect ect! (this is of course an example and suggestion)
+
+
+how to set something like that up:
+
+
+I'd add it to your RandomTalk (that's what its called in the GT template at least):
+
+You can put if statements into your random talk so its great for this! The dialogue would play randomly but still only if the player answered with yes ^^
+not making them have to sit through flower talk if they aren't interested or something idk, who doesn't like flowers? I'm allergic to pollen and still love em
+
+RandomTalk : nonoverlap_pool
+{
+	if flowertalk == "on"
+	{
+		"\0\s[0]I think you would like %(flowers),\w4 They remind me of you.\e"
+		"\0\s[0]I wonder how being a flower feels...\e"
+	}
+
+"\0\s[0]normal dialogue\e"
+
+"\0\s[0]Do you like flowers?\e"
+}
+
+the character constantly asking if the user likes flowers despite them answering is weird so we could move that diolauge to a menu where you let the ghost ask you stuff or as a diolauge that only plays once
+
+
+
+
+
+
+
