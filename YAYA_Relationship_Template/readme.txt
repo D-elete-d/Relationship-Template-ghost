@@ -1,7 +1,6 @@
-Hellooo, this is my submission for the Ghost jam, A template yaaay! T vT I hope this proves entertaining or useful to you in some way I swear Imma update it at some point
+Hellooo, this is my submission for the Ghost jam, A template yaaay! T vT I hope this proves entertaining or useful to you in some way, this ghost is meant to be something you can learn how a relationship system would work.
 
-this ghost is meant to be something you can learn how a relationship system would work
-and even if it doesn't help much in that regard you can just copy and paste stuff, all you gotta do is delete what you don't wanna write for and change the dialogue
+And even if it doesn't help much in that regard you can just copy and paste stuff, all you gotta do is delete what you don't wanna write for and change the dialogue
 (+ add more) 
 
 

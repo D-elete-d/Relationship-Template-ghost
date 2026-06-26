@@ -1,5 +1,5 @@
 ﻿
-OnMouseMove
+OnMouseMove//dont touch, okie?
  {
 		if reference3 == 0
 		{
@@ -7,8 +7,61 @@ OnMouseMove
 		}
 		else{}
  }
- 
+/*
+You can add as many elseifs as you want to this, but it may become too much work, you can generally leave it as  your default diolauge, but what if you want special diolauge to
+play if the user has reached a certian number of points? then you would use single if statments, yup. if statments can work by themselves so long as they are inside a function(?) 
 
+
+if Feelings >= 100
+{
+	"\0\s[0]Hey you petting feind :>"
+}
+
+I'll add this to the pool below so you can see it in action.
+
+but lets say your user hasn't pet your ghost alot, instead gotten their level up with talking, It wouldnt make sense for them to get this diolauge, right?
+so lets make a new vaiable that will count how many times the user has pet them!
+
+lets make it simple, and easy to remember:
+
+pets = 0
+
+if you want to use this, (and are expirementing with this ghost) add it to your InitVaribles in gt_menu.dic so you can get it initualized :> 
+also remember to add it to the first boot in whatever ghost your using!
+
+also if you are making a 2 person ghost/Sakura and Kero then you should make two pet variables and use them acordingly for each of them, you can make them react to the other getting
+pet and change their reactions depending on how many times they have been pet, it would be weird if you were only petting one of them and the other started acting like you have
+been petting them, right? 
+
+so you could do something like:
+The inital of each ghost followed by pets. it should be easy to remember and decifer whos is whos quickly ^^ but you can call them whatever you want so long as they're seperate.
+
+spets = 0 //sakura 
+kpets = 0 //Kero
+
+speaking of the menu dic, you can also add %(pets) somewhere there (next to the %(feelings), maybe? It will show you the current value/number stored in it.
+
+I added the pets variable to the pool below, just uncomment it and the brackets, then add this to the pool:
+
+if pets >= 20 //if pets is equal or more than 20 the diolauge below will play!
+{
+	"\0\s[2]\i[0]You sure like to pet me!\e"
+	"\0\s[2]You reach out to pet the lemon...\w8\s[1]\w4 \n\n[half]--and return with the knowlege there is a cut on your hand."
+}
+
+---
+You can do the same thing with hitting, if you want a counter for that as well!
+
+
+just like the feelings though, you can set up multiple elseifs to it and make there be alot of other diolauge you can get depending on how much you've pet them
+Remember (again) that you should only be adding what you want and enjoy. If you find yourself struggling to come up with more diolauge for something like this, or just adding
+anything that comes to mind, not really reflecting the character but is just kind of there to be filler, especially if it starts to take a toll on you, however "minor" it is, take a break!
+The code isnt going anywhere and you absolutley don't wanna burn yourself out or lose intrest in your project over exhaustion.  
+
+Your ghost doesnt have to be "perfect" upon release and its okay to hold onto it until its at a state your happy with.
+People will probably enjoy your ghost alot more if you enjoyed making it! (〃￣︶￣)人(￣︶￣〃)
+
+*/
 MouseMoveSakura
  {
 	if reference4 != ""
@@ -19,22 +72,31 @@ MouseMoveSakura
  			stroke = 0
 			if reference4 == "leemoon"
  			{
-				Feelings += 5
+				//pets += 1
+				//{
+				if Feelings >= 100
 				{
+					"\0\s[0]Hey you petting feind :>"
+				}				
+				Feelings += 5 //This adds 5 points to the variable everytime one of these diolauges play.
+				{
+				//You can add any if statments in here!
 				"\0\s[2]each pet adds to 5 points to the feelings variable!\e"
-				"\0\s[2]<33\e"
+				"\0\s[2]\i[0]<33\e"
+				"\0\s[2]\i[0]lemons :>\e"
 				}
+				//}
 			}
-			//Uncomment below if you want, basically if the "feelings" drop down to 10 or below then it wont allow the user to gain anymore friendship points from petting.
+			//Uncomment below if you want, basically if the "feelings" drop down to, or below 10 then it wont allow the user to gain anymore friendship points from petting.
 			// elseif Feelings <=10
 			// {
-				// "\0\s[1]I dont like you.\e"
-				//"\0\s[1]Nope.\e"
+				// "\0\s[1]I don't like you.\e"
+				// "\0\s[0]I have done nothing to you, yet you treat me like this.\e"
 			// }
-			}
- 		}
-else
-{stroke = 0}
+		}
+ 	}
+	else
+	{stroke = 0}
 }
 
 
@@ -51,27 +113,38 @@ OnMouseDoubleClick
 	}
  }
 
+/*
+Here I think its okay to subtract alot of points (if you want) beacuse hitting them is usually on purpose, but you can set up a fail safe(?) 
+so if anyone is about to accidently hit your ghost there will be a confirm popup in the balloon, asking if they want to go through with the action.
+After the inital warning it shouldnt play again, if someone if trying to see the bad ending/bad route to your ghost (if you add one :>) then them having to constantly
+click on confirm each time could get annoying for them (which is purposeful in undertale HEHEHEHEEH) but even worse, it could be annoying for you since you will have to 
+playtest it and check for bugs, and when your trying to "ethically"  lower your friendship it can get annoying for you too o7 but you do what you want! :D
+
+how to set something like that up:
+
+*/ 
 MouseDoubleClickSakura
  {
- 	if reference4 == "leemoon"
+ 	if reference4 == "leemoon"//name of your collision defined in surface.txt
 	{
 		Feelings -= 5
 		{
 			if feelings <= 10
 			{
-			"\0\s[1]And I thought *I* was supposed to be the sour one.\e"
+				"\0\s[1]And I thought *I* was supposed to be the sour one.\e"
 			}
 			if Feelings <= 40
 			{
-			"\0\s[1]*you puncture the lemon and it starts leeking lemon juiceee :C\e"
+				"\0\s[1]*you puncture the lemon and it starts leeking lemon juiceee :C\e"
 			}
 			if Feelings <= 50
 			{
-				"\0\s[2]How totally unexpected.\e"
+				"\0\s[0]What was that for?? :C\e"
 			}
-			if feelings >= 100
+			if feelings >= 100 //if you have a high relationship with them
 			{
 				"\0\s[2]How could you? after everything we have been through...\e"
+				"\1\s[10]Is now a good time to mention im allergic to lemons?\e"
 			}
 		}
 	}

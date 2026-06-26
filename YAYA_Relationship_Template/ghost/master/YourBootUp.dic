@@ -3,7 +3,7 @@ OnFirstBoot : all
 /*In the bootend:
 
 Initalizing your variables is very important, if you have variables in the first boot then it will only get initalized ghost is being run for the first time.
-It shouldnt affect your users but this means you will have to initalize them for your own use,
+It shouldnt affect your users but this means you will have to initalize them for your own use, which will mostly be testing.
 You should be able to set/initalize a variable by typing in script input 'feelings = 50'
 You can also use the script input to check the number/word stored in your variable by typing  examples: 
 %(variable) %(yourvariable) %(Love) %(Feelings)
@@ -14,8 +14,10 @@ Feelings = 50 //starts at 50 so you can have the relationship be able decrease, 
 
 	if reference0 == 0
  	{
-		"\0\s[2]I'mma prefice this by saying I'm fairly new to coding but I was able to (semi) understand it quickly,\w8\w8\n\n and I've seen a few people (online) asking about how to make a relationship system and--\w8\w8\n\n Well, I wanna contribute SOMETHING to this awesome community!\w8\w8\n\n\n[half] a fair warning though, alot of people recommend avoiding making a relationship system for your first ghost as it takes alot of time,\w4 and can be confusing for some people that are new to coding,\w4 so I hope to break it down either into something easier to understand(?)\n Or something people will be able to just a copy paste :3\w8\w8\n\n\x (WARNING) This will probably have spelling errors,\w4 I type fastish(?) and dont actually plan what I'm gonna say so uh... this might be bad XD\n\n[half] BUT I hope to Make an update for this-- I started to ramble after this, sorry T vT-- hold ctrl to skip.\x  cause I spent the last day/day before the end of the jam to make it, so I guess its kinda rushed? Its not like I didnt care I just came up with it on the last day and was unable to work on anything for the first 4 days of the jam (busy and mentally exhausted)\w8 and the other ideas I had would take too long,\w4 so when I came up with making a template I really wanted to do it uhm this got kinda long, sorry I started to ramble after this, sorry ¯\_(ツ)_/¯\e"
- 	}
+		"\0\s[0]So,\w4 you wanna make a relationship system for your ghost!\w8\n\n Everyones been there at some point, attempting it or just thinking about it.\n\n\w4 probably.\n\n I made this to help with that!\x/
+		I struggle with actually appling what I’ve learned to coding,\w4 so after I figured this thing out I decided to just go ahead and make this.\x/
+		Feel free to contact me if you have any questions, run into any bugs or having trouble understanding anything, I genuinly want to help! (。・ω・。)\e"
+	}//(～￣▽￣)～ b0ttled_up_emotions on discord, just dm me
 	else{"\0\s[1]\i[0]Well, When life gives you lemons!--"}
 }
 

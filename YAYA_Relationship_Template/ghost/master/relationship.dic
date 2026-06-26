@@ -15,6 +15,7 @@ Feelings
  a relationship system doesnt have to be super complicated and can just be as small as two pools of dialogue! So please dont feel pressured to fill up every single
  pool, its better to have more dialogue always available to the player than have 10 per level ^^ 
 */ 
+
 RandomTalk : nonoverlap_pool
 {
 	if Feelings <= 10
@@ -32,8 +33,8 @@ RandomTalk : nonoverlap_pool
 		
 			elseif Feelings >= 50 //our starting number!
 			{
-				"\0\s[0]Quick thing, I dont recommend actually using this ghost as a full template for you own, I guess there isnt a reason you shouldnt besides it lacking in alot of features.\e"
 				"\0\s[0]This is ""normal"" dialogue/the dialogue you will get if your friendship hasnt changed at all with the ghost\e"
+				"\0\s[0]add as much as you want into any of the pools! :D\e"
 			}
 			
 	elseif Feelings >= 60 //Remember that what the numbers mean, going up or down- Relys soley on what dialogue you put into each pool! (as well as any variables you are using) You could make them if you get to a certian friendship level maybe the character realises they are getting too close or attached and grow uncomfortable or if the player confesses their love too soon, ect ect just spin ballin ideas here.
