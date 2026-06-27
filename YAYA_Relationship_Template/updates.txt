@@ -1,6 +1,6 @@
 charset,OSNative
 file,install.txtea4d7ed076551e836c1606718172ac02size=93date=2026-06-24T15:21:06
-file,readme.txt80f61d6136dbf6d011c0f13f7099efecsize=702date=2026-06-26T05:26:11
+file,readme.txtd8170005a4893208efbc96c998e549b4size=537date=2026-06-27T08:36:21
 file,ghost/master/Other.dic07865b4c3ad9677511d33c5efd62d8f2size=2302date=2026-06-25T07:17:52
 file,ghost/master/YourBootUp.diceffb6cc844c4657555d2f5b1696fb88asize=1649date=2026-06-26T05:34:40
 file,ghost/master/descript.txtf97480e7404a51eaf1ec6612a8d5aa95size=205date=2026-06-25T06:12:01
