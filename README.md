@@ -21,6 +21,7 @@ if feelings <= 10
 	//as much diolauge as you want here
 	
 }
+
 elseif feelings >= 50
 
 {
@@ -28,7 +29,9 @@ elseif feelings >= 50
 	//as much diolauge as you want here
 	
 }
+
 elseif feelings >= 60
+
 {
 
 	//as much diolauge as you want here
