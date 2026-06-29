@@ -16,15 +16,21 @@ Just copy past this anywhere you want it to be in your code (you can put it in m
 
 if feelings <= 10
 {
+
 	//as much diolauge as you want here
+	
 }
 elseif feelings >= 50
 {
+
 	//as much diolauge as you want here
+	
 }
 elseif feelings >= 60
 {
+
 	//as much diolauge as you want here
+	
 }
 
 /*add as many elseifs as you want, just put whatever number after it that you want the variable to need to qual to in order to activate. 
