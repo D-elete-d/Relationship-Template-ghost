@@ -15,12 +15,14 @@ getting sent to square one and rebuilding it from there, the players actions can
 Just copy past this anywhere you want it to be in your code (you can put it in multiple places.)*/
 
 if feelings <= 10
+
 {
 
 	//as much diolauge as you want here
 	
 }
 elseif feelings >= 50
+
 {
 
 	//as much diolauge as you want here
