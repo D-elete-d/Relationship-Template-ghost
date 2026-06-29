@@ -1,12 +1,4 @@
 ﻿
-OnMouseMove//dont touch, okie?
- {
-		if reference3 == 0
-		{
-			MouseMoveSakura
-		}
-		else{}
- }
 /*
 You can add as many elseifs as you want to this, but it may become too much work, you can generally leave it as  your default diolauge, but what if you want special diolauge to
 play if the user has reached a certian number of points? then you would use single if statments, yup. if statments can work by themselves so long as they are inside a function(?) 

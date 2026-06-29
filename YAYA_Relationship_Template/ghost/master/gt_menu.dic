@@ -1,10 +1,4 @@
 ﻿
-OpenSakuraMenu
-{
-	MenuRun
-}
-
-
 MenuRun : all
  {	
 	"\_q"
@@ -25,18 +19,6 @@ I'll add a link to the guide, though im sure you've already seen it (oﾟvﾟ)�
 Another thing you could do is have a option in the menu for the user to ask the ghost directly what they think of them, 
 which can be more impactful, (but not nessasary) than seeing a number going up or down. you could also just not add anything like that, remember to do only what you want!
 */
-
-OnLastTalk 
-{
-"%(lastTalk)\e"
-}
-
-Select.CANCEL
-{}
-
-OnChoiceTimeout
- {"\0\s[0]The menu has timed out.\e"}
-
 
 
 Select.InitVaribles 

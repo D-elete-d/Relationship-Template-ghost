@@ -126,19 +126,32 @@ elseif value == "on"
 	{
 	"\0\s[0]Value is now set to off: %(value)"
 	}
+	
+----------
+What if you want to
+
+
+
+
+
+(variable example I'm using is "value" but it can be any word(s) you want)
 }
 
 But for it to work (well) You will have to initilize the variable by opening the dev pallete and opening script input and typing 
 'value = on' (i think?)
+
+You dont have to have relationship dialogue for every single interaction with your ghost, you can cover alot of relationship stages with just the <=, >= symbols!
+Only do what you actually want and make sure you are having fun :]
 */ 
-
-
-
-//You can easily copy and paste this anywhere you want in  your dic files, such as: booting them up or closing them, or petting/hitting diolauges 
-//You dont have to have relationship dialogue for every single interaction with your ghost, you can cover alot of relationship stages with just the <=, >= symbols! only do what you actually want and make sure you are having fun :]
-
 /*SHORTENED VERSION:
+You can easily copy and paste this anywhere you want in  your dic files, such as:
+booting them up or closing them, or petting/hitting diolauges. just make sure its within a function! 
+examples: RandomTalk, normalboottalk, OnClose ect ect. 
 
+if feelings <= 10
+{
+	
+}
 elseif Feelings <= 30
 {
 	

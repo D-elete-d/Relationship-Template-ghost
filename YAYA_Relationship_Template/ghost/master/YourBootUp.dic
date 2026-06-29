@@ -10,7 +10,7 @@ You can also use the script input to check the number/word stored in your variab
 
 */
 
-Feelings = 50 //starts at 50 so you can have the relationship be able decrease, you dont have to do this, you can change it to start at 0 or just make 
+Feelings = 50 //starts at 50 so you can have the relationship be able decrease, you dont have to do this, you can change it to start at 0
 
 	if reference0 == 0
  	{
